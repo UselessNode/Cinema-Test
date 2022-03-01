@@ -13,16 +13,17 @@ namespace Cinema
     public partial class AddingForm : Form
     {
         FormHome formHome;
-        public AddingForm(FormHome home)
+        public AddingForm(FormHome home, int id)
         {
             formHome = home;
             InitializeComponent();
-            BackColor = Properties.Settings.Default.Menu;
+            labelId.Text = id.ToString();
         }
         DateTime date;
         int filmID;
         int occupancy;
         int roomID;
+        int id;
         private void ApplyButton_Click(object sender, EventArgs e)
         {
             filmID = filmsComboBox.SelectedIndex + 1;
@@ -31,7 +32,7 @@ namespace Cinema
             date = dateTimePicker.Value;
             formHome.AddRow(date, filmID, occupancy, roomID);
             formHome.LoadTable();
-            Hide();
+            Close();
         }
 
         private void AddingForm_Load(object sender, EventArgs e)

@@ -23,23 +23,26 @@ namespace Cinema
         AddingForm addingForm;
         EditingForm editingForm;
         SearchForm searchForm;
+        public DataSet data;
         public DataGridViewRow selectedRow;
         string connectionString = Properties.Settings.Default.BaseConnectionString;
-        string selectString = "SELECT * FROM [Session]";
+        string selector_session = "selector_session";
         private void FormHome_Load(object sender, EventArgs e)
         {
             LoadTable();
         }
         public void LoadTable()
         {
-            DataSet data = new DataSet();
-            SqlDataAdapter adapter = new SqlDataAdapter(selectString, connectionString);
+            data = new DataSet();
+            SqlDataAdapter adapter = new SqlDataAdapter(selector_session, connectionString);
+            adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
             adapter.Fill(data);
             dataGridView1.DataSource = data.Tables[0];
         }
         private void AddingButton_Click(object sender, EventArgs e)
         {
-            addingForm = new AddingForm(this);
+            int id = dataGridView1.Rows.Count + 1;
+            addingForm = new AddingForm(this,id);
             addingForm.Owner = this;
             addingForm.Show();
         }
@@ -73,15 +76,21 @@ namespace Cinema
         }
         private void SearchFilterButton_Click(object sender, EventArgs e)
         {
+            ShowSearch();
+        }
+
+        public void ShowSearch()
+        {
             searchForm = new SearchForm(this);
             searchForm.Owner = this;
             searchForm.ShowDialog();
         }
+
         public void AddRow(DateTime date,int filmID, int occupancy, int roomID)
         {
             string requestString = @"INSERT INTO [dbo].[Session] ([FilmID], [Occupancy], [Date], [RoomID])" +
                                    @"VALUES (@film, @occ, @date, @room)";
-            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.BaseConnectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
@@ -135,7 +144,6 @@ namespace Cinema
                     throw;
                 }
             }
-            //UPDATE Session SET FilemID = '', Occupancy = '', Date = '', RoomID = '' WHERE Id = ;
         }
         private void RemoveRow(int id)
         {

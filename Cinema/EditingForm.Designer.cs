@@ -59,7 +59,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(407, 89);
+            this.label1.Location = new System.Drawing.Point(205, 89);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 19);
@@ -107,14 +107,15 @@
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(13, 9);
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.Honeydew;
+            this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(26, 19);
+            this.label6.Padding = new System.Windows.Forms.Padding(4);
+            this.label6.Size = new System.Drawing.Size(485, 27);
             this.label6.TabIndex = 2;
             this.label6.Text = "ID";
             // 
@@ -126,7 +127,7 @@
             this.filmsComboBox.Location = new System.Drawing.Point(116, 52);
             this.filmsComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.filmsComboBox.Name = "filmsComboBox";
-            this.filmsComboBox.Size = new System.Drawing.Size(530, 27);
+            this.filmsComboBox.Size = new System.Drawing.Size(356, 27);
             this.filmsComboBox.TabIndex = 3;
             this.filmsComboBox.ValueMember = "Id";
             // 
@@ -150,10 +151,10 @@
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(465, 87);
+            this.dateTimePicker.Location = new System.Drawing.Point(263, 87);
             this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(181, 27);
+            this.dateTimePicker.Size = new System.Drawing.Size(209, 27);
             this.dateTimePicker.TabIndex = 5;
             // 
             // roomsComboBox
@@ -164,7 +165,7 @@
             this.roomsComboBox.Location = new System.Drawing.Point(116, 121);
             this.roomsComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.roomsComboBox.Name = "roomsComboBox";
-            this.roomsComboBox.Size = new System.Drawing.Size(530, 27);
+            this.roomsComboBox.Size = new System.Drawing.Size(81, 27);
             this.roomsComboBox.TabIndex = 6;
             this.roomsComboBox.ValueMember = "Id";
             // 
@@ -195,7 +196,7 @@
             // 
             this.CancelButton.AutoSize = true;
             this.CancelButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CancelButton.Location = new System.Drawing.Point(556, 203);
+            this.CancelButton.Location = new System.Drawing.Point(382, 203);
             this.CancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(90, 30);
@@ -217,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(63)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(670, 246);
+            this.ClientSize = new System.Drawing.Size(485, 246);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.roomsComboBox);

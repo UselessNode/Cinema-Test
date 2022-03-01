@@ -74,7 +74,7 @@ namespace Cinema
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.menuStrip1.Font = new System.Drawing.Font("Tahoma", 14F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddingButton,
             this.EditingButton,
@@ -84,7 +84,7 @@ namespace Cinema
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 80);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(255, 161);
+            this.menuStrip1.Size = new System.Drawing.Size(199, 140);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
@@ -92,10 +92,10 @@ namespace Cinema
             // AddingButton
             // 
             this.AddingButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.AddingButton.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
-            this.AddingButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.AddingButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.AddingButton.ForeColor = System.Drawing.Color.White;
             this.AddingButton.Name = "AddingButton";
-            this.AddingButton.Size = new System.Drawing.Size(248, 31);
+            this.AddingButton.Size = new System.Drawing.Size(192, 23);
             this.AddingButton.Text = "Добавить строку";
             this.AddingButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AddingButton.Click += new System.EventHandler(this.AddingButton_Click);
@@ -103,10 +103,10 @@ namespace Cinema
             // EditingButton
             // 
             this.EditingButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.EditingButton.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
-            this.EditingButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.EditingButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.EditingButton.ForeColor = System.Drawing.Color.White;
             this.EditingButton.Name = "EditingButton";
-            this.EditingButton.Size = new System.Drawing.Size(248, 31);
+            this.EditingButton.Size = new System.Drawing.Size(192, 23);
             this.EditingButton.Text = "Изменить строку";
             this.EditingButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.EditingButton.Click += new System.EventHandler(this.EditingButton_Click);
@@ -114,30 +114,30 @@ namespace Cinema
             // RemovingButton
             // 
             this.RemovingButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.RemovingButton.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
-            this.RemovingButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.RemovingButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.RemovingButton.ForeColor = System.Drawing.Color.White;
             this.RemovingButton.Name = "RemovingButton";
-            this.RemovingButton.Size = new System.Drawing.Size(248, 31);
+            this.RemovingButton.Size = new System.Drawing.Size(192, 23);
             this.RemovingButton.Text = "Удалить строку";
             this.RemovingButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RemovingButton.Click += new System.EventHandler(this.RemovingButton_Click);
             // 
             // ReportingButton
             // 
-            this.ReportingButton.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
-            this.ReportingButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.ReportingButton.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))));
+            this.ReportingButton.ForeColor = System.Drawing.Color.White;
             this.ReportingButton.Name = "ReportingButton";
-            this.ReportingButton.Size = new System.Drawing.Size(248, 31);
+            this.ReportingButton.Size = new System.Drawing.Size(192, 23);
             this.ReportingButton.Text = "Создать отчёт";
             this.ReportingButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ReportingButton.Click += new System.EventHandler(this.ReportingButton_Click);
             // 
             // SearchFilterButton
             // 
-            this.SearchFilterButton.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
-            this.SearchFilterButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.SearchFilterButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.SearchFilterButton.ForeColor = System.Drawing.Color.White;
             this.SearchFilterButton.Name = "SearchFilterButton";
-            this.SearchFilterButton.Size = new System.Drawing.Size(248, 31);
+            this.SearchFilterButton.Size = new System.Drawing.Size(192, 23);
             this.SearchFilterButton.Text = "Поиск и фильтрация";
             this.SearchFilterButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SearchFilterButton.Click += new System.EventHandler(this.SearchFilterButton_Click);
@@ -150,8 +150,8 @@ namespace Cinema
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -175,20 +175,20 @@ namespace Cinema
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.SeaShell;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 52);
+            this.label1.Size = new System.Drawing.Size(207, 52);
             this.label1.TabIndex = 1;
             this.label1.Text = "Главная";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Cinema.Properties.Resources.Cinema_logo_black;
+            this.pictureBox1.Image = global::Cinema.Properties.Resources.Cinema_logo_white;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
@@ -208,6 +208,7 @@ namespace Cinema
             this.Name = "FormHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -223,7 +224,6 @@ namespace Cinema
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem AddingButton;
         private System.Windows.Forms.ToolStripMenuItem EditingButton;
@@ -233,6 +233,7 @@ namespace Cinema
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem ReportingButton;
         private System.Windows.Forms.ToolStripMenuItem SearchFilterButton;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelId = new System.Windows.Forms.Label();
             this.filmsComboBox = new System.Windows.Forms.ComboBox();
             this.filmsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.filmsDataSet = new Cinema.FilmsDataSet();
@@ -59,7 +59,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(407, 89);
+            this.label1.Location = new System.Drawing.Point(205, 89);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 19);
@@ -107,16 +107,17 @@
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(13, 9);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(26, 19);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "ID";
+            this.labelId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.labelId.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelId.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelId.ForeColor = System.Drawing.Color.White;
+            this.labelId.Location = new System.Drawing.Point(0, 0);
+            this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelId.Name = "label6";
+            this.labelId.Padding = new System.Windows.Forms.Padding(4);
+            this.labelId.Size = new System.Drawing.Size(481, 27);
+            this.labelId.TabIndex = 2;
+            this.labelId.Text = "ID";
             // 
             // filmsComboBox
             // 
@@ -126,7 +127,7 @@
             this.filmsComboBox.Location = new System.Drawing.Point(116, 52);
             this.filmsComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.filmsComboBox.Name = "filmsComboBox";
-            this.filmsComboBox.Size = new System.Drawing.Size(530, 27);
+            this.filmsComboBox.Size = new System.Drawing.Size(341, 27);
             this.filmsComboBox.TabIndex = 3;
             this.filmsComboBox.ValueMember = "Id";
             // 
@@ -150,10 +151,11 @@
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(465, 87);
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker.Location = new System.Drawing.Point(263, 87);
             this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(181, 27);
+            this.dateTimePicker.Size = new System.Drawing.Size(194, 27);
             this.dateTimePicker.TabIndex = 5;
             // 
             // roomsComboBox
@@ -164,7 +166,7 @@
             this.roomsComboBox.Location = new System.Drawing.Point(116, 121);
             this.roomsComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.roomsComboBox.Name = "roomsComboBox";
-            this.roomsComboBox.Size = new System.Drawing.Size(530, 27);
+            this.roomsComboBox.Size = new System.Drawing.Size(81, 27);
             this.roomsComboBox.TabIndex = 6;
             this.roomsComboBox.ValueMember = "Id";
             // 
@@ -181,27 +183,29 @@
             // ApplyButton
             // 
             this.ApplyButton.AutoSize = true;
+            this.ApplyButton.BackColor = System.Drawing.SystemColors.Control;
             this.ApplyButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ApplyButton.Location = new System.Drawing.Point(17, 202);
             this.ApplyButton.Margin = new System.Windows.Forms.Padding(4);
             this.ApplyButton.Name = "ApplyButton";
-            this.ApplyButton.Size = new System.Drawing.Size(90, 30);
+            this.ApplyButton.Size = new System.Drawing.Size(90, 31);
             this.ApplyButton.TabIndex = 7;
             this.ApplyButton.Text = "Ok";
-            this.ApplyButton.UseVisualStyleBackColor = true;
+            this.ApplyButton.UseVisualStyleBackColor = false;
             this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
             // CancelButton
             // 
             this.CancelButton.AutoSize = true;
+            this.CancelButton.BackColor = System.Drawing.SystemColors.Control;
             this.CancelButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CancelButton.Location = new System.Drawing.Point(556, 203);
+            this.CancelButton.Location = new System.Drawing.Point(367, 203);
             this.CancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(90, 30);
             this.CancelButton.TabIndex = 8;
             this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.UseVisualStyleBackColor = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // filmsTableAdapter
@@ -217,14 +221,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(63)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(670, 246);
+            this.ClientSize = new System.Drawing.Size(481, 246);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.roomsComboBox);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.occupancyNumeric);
             this.Controls.Add(this.filmsComboBox);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelId);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -251,7 +255,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelId;
         private System.Windows.Forms.ComboBox filmsComboBox;
         private System.Windows.Forms.NumericUpDown occupancyNumeric;
         private System.Windows.Forms.DateTimePicker dateTimePicker;

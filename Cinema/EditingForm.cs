@@ -17,7 +17,6 @@ namespace Cinema
         {
             formHome = home;
             InitializeComponent();
-            BackColor = Properties.Settings.Default.Menu;
         }
         DateTime date;
         int filmID;
