@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Cinema
 {
@@ -123,21 +124,27 @@ namespace Cinema
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
             int rows = home.dataGridView1.RowCount;
-            int columns = home.dataGridView1.ColumnCount;
-            string searchText = searchBox.Text;
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < columns; j++)
-                {
-                    home.dataGridView1.Rows[i].Selected = false;
-                    if (home.dataGridView1.Rows[i].Cells[j].Value != null)
-                        if (home.dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(searchText))
-                        {
-                            home.dataGridView1.Rows[i].Selected = true;
-                            break;
-                        }
-                }
-            }
+int columns = home.dataGridView1.ColumnCount;
+            string searchText = $"Id Like '%{searchBox.Text.Trim()}%'";
+
+            DataRowCollection collection = ((DataTable)home.dataGridView1.DataSource).Rows;
+            DataRow[] dataRows = ((DataTable)home.dataGridView1.DataSource).Select(searchText);
+            int rowIndex = collection.IndexOf(dataRows[0]);
+            home.dataGridView1.CurrentCell = home.dataGridView1[0, rowIndex];
+
+            //for (int i = 0; i < rows; i++)
+            //{
+            //    for (int j = 0; j < columns; j++)
+            //    {
+            //        home.dataGridView1.Rows[i].Selected = false;
+            //        if (home.dataGridView1.Rows[i].Cells[j].Value != null)
+            //            if (home.dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(searchText))
+            //            {
+            //                home.dataGridView1.Rows[i].Selected = true;
+            //                break;
+            //            }
+            //    }
+            //}
         }
     }
 }
