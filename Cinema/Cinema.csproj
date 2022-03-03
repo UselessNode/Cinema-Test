@@ -61,16 +61,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EditingForm.cs">
+    <Compile Include="Forms\EditingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditingForm.Designer.cs">
+    <Compile Include="Forms\EditingForm.Designer.cs">
       <DependentUpon>EditingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddingForm.cs">
+    <Compile Include="Forms\AddingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddingForm.Designer.cs">
+    <Compile Include="Forms\AddingForm.Designer.cs">
       <DependentUpon>AddingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FilmsDataSet.Designer.cs">
@@ -78,11 +78,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FilmsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="HomeForm.cs">
+    <Compile Include="FilmsDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FilmsDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GenresDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenresDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeForm.Designer.cs">
+    <Compile Include="Forms\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OtherTables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OtherTables.Designer.cs">
+      <DependentUpon>OtherTables.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,20 +107,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>romsBaseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SearchForm.cs">
+    <Compile Include="RoomsDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RoomsDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchForm.Designer.cs">
+    <Compile Include="Forms\SearchForm.Designer.cs">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="EditingForm.resx">
+    <EmbeddedResource Include="Forms\EditingForm.resx">
       <DependentUpon>EditingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddingForm.resx">
+    <EmbeddedResource Include="Forms\AddingForm.resx">
       <DependentUpon>AddingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeForm.resx">
+    <EmbeddedResource Include="Forms\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OtherTables.resx">
+      <DependentUpon>OtherTables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -116,7 +140,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SearchForm.resx">
+    <EmbeddedResource Include="Forms\SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FilmsDataSet.xsc">
@@ -129,6 +153,28 @@
     </None>
     <None Include="FilmsDataSet.xss">
       <DependentUpon>FilmsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FilmsDS.xsc">
+      <DependentUpon>FilmsDS.xsd</DependentUpon>
+    </None>
+    <None Include="FilmsDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FilmsDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FilmsDS.xss">
+      <DependentUpon>FilmsDS.xsd</DependentUpon>
+    </None>
+    <None Include="GenresDS.xsc">
+      <DependentUpon>GenresDS.xsd</DependentUpon>
+    </None>
+    <None Include="GenresDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GenresDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GenresDS.xss">
+      <DependentUpon>GenresDS.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -149,6 +195,17 @@
     </None>
     <None Include="romsBaseDataSet.xss">
       <DependentUpon>romsBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RoomsDS.xsc">
+      <DependentUpon>RoomsDS.xsd</DependentUpon>
+    </None>
+    <None Include="RoomsDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RoomsDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RoomsDS.xss">
+      <DependentUpon>RoomsDS.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
