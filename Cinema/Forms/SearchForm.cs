@@ -29,6 +29,15 @@ namespace Cinema
         bool filterRoom = false;
         bool filterDate = false;
         bool bothFilters = false;
+        string filterText;
+        enum Filter
+        {
+            Room,
+            Date,
+            Both,
+            None
+        }
+        Filter currientFulter;
         int room;
 
         private void TurnOnFilter(object sender, EventArgs e)
@@ -37,7 +46,7 @@ namespace Cinema
             switch (c.Tag)
             {
                 case "Room":
-                    filterRoom = !filterRoom;
+                    currientFulter = Filter.Room;
                     radioButton1.Visible = !radioButton1.Visible;
                     radioButton2.Visible = !radioButton2.Visible;
                     radioButton3.Visible = !radioButton3.Visible;
@@ -45,7 +54,7 @@ namespace Cinema
                     break;
 
                 case "Date":
-                    filterDate = !filterDate;
+                    currientFulter = Filter.Date;
                     dateTimePicker1.Visible = !dateTimePicker1.Visible;
                     dateTimePicker2.Visible = !dateTimePicker2.Visible;
                     label3.Visible = !label3.Visible;
@@ -55,6 +64,7 @@ namespace Cinema
             bothFilters = false;
             if(filterDate && filterRoom)
             {
+                currientFulter = Filter.Both;
                 filterRoom = false;
                 filterDate = false;
                 bothFilters = true;
@@ -64,6 +74,7 @@ namespace Cinema
         private void DefaultButton_Click(object sender, EventArgs e)
         {
             formHome.LoadTable();
+            filterText = "";
         }
         private void FilterButton_Click(object sender, EventArgs e)
         {
@@ -72,26 +83,25 @@ namespace Cinema
             // Два и более | SELECT * FROM [Session] WHERE (@text) AND () AND ()
 
             //SELECT * FROM [Session] WHERE ([Date] BETWEEN '2022-01-01' AND '2022-03-1') AND [RoomID] = '1'
-            string filterText = "";
-            if (bothFilters)
+            filterText = "";
+            if (currientFulter == Filter.Both)
             {
                 filterText = $"SELECT * FROM [Session] WHERE ([Date] " +
                              $"BETWEEN '{dateTimePicker1.Value.ToShortDateString()}' " +
                              $"AND '{dateTimePicker2.Value.ToShortDateString()}' " +
                              $"AND [RoomID] = '{room}'";
             }
-            if (filterRoom)
+            if (currientFulter == Filter.Room)
             {
                 filterText += $"SELECT * FROM [Session] WHERE " +
                               $"[RoomID] = '{room}'";
             }
-            if (filterDate)
+            if (currientFulter == Filter.Date)
             {
                 filterText += $"SELECT * FROM [Session] WHERE" +
                               $"[Date] BETWEEN '{dateTimePicker1.Value.ToShortDateString()}' " +
                               $"AND '{dateTimePicker2.Value.ToShortDateString()}'";
             }
-
 
             DataSet set = new DataSet();
             if (!String.IsNullOrEmpty(filterText))
@@ -102,6 +112,8 @@ namespace Cinema
                     formHome.sessionTable.DataSource = set.Tables[0];
                 }
             }
+            else   
+                MessageBox.Show($"{filterText} is empty!");
 
             //if (filterOccu)
             //{
