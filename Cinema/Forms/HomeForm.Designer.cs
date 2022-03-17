@@ -29,18 +29,19 @@ namespace Cinema
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.AddingButton = new System.Windows.Forms.ToolStripMenuItem();
             this.EditingButton = new System.Windows.Forms.ToolStripMenuItem();
             this.RemovingButton = new System.Windows.Forms.ToolStripMenuItem();
             this.ReportingButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.SubTablesButton = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SplitContainer = new System.Windows.Forms.SplitContainer();
             this.sessionTable = new System.Windows.Forms.DataGridView();
-            this.SubTablesButton = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -65,7 +66,7 @@ namespace Cinema
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 80);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(195, 160);
+            this.menuStrip1.Size = new System.Drawing.Size(195, 141);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
@@ -76,7 +77,7 @@ namespace Cinema
             this.AddingButton.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
             this.AddingButton.ForeColor = System.Drawing.Color.White;
             this.AddingButton.Name = "AddingButton";
-            this.AddingButton.Size = new System.Drawing.Size(226, 27);
+            this.AddingButton.Size = new System.Drawing.Size(188, 27);
             this.AddingButton.Text = "Добавить строку";
             this.AddingButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AddingButton.Click += new System.EventHandler(this.AddingButton_Click);
@@ -87,7 +88,7 @@ namespace Cinema
             this.EditingButton.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
             this.EditingButton.ForeColor = System.Drawing.Color.White;
             this.EditingButton.Name = "EditingButton";
-            this.EditingButton.Size = new System.Drawing.Size(226, 27);
+            this.EditingButton.Size = new System.Drawing.Size(188, 27);
             this.EditingButton.Text = "Изменить строку";
             this.EditingButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.EditingButton.Click += new System.EventHandler(this.EditingButton_Click);
@@ -98,7 +99,7 @@ namespace Cinema
             this.RemovingButton.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
             this.RemovingButton.ForeColor = System.Drawing.Color.White;
             this.RemovingButton.Name = "RemovingButton";
-            this.RemovingButton.Size = new System.Drawing.Size(226, 27);
+            this.RemovingButton.Size = new System.Drawing.Size(188, 27);
             this.RemovingButton.Text = "Удалить строку";
             this.RemovingButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RemovingButton.Click += new System.EventHandler(this.RemovingButton_Click);
@@ -108,9 +109,19 @@ namespace Cinema
             this.ReportingButton.Font = new System.Drawing.Font("Tahoma", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))));
             this.ReportingButton.ForeColor = System.Drawing.Color.White;
             this.ReportingButton.Name = "ReportingButton";
-            this.ReportingButton.Size = new System.Drawing.Size(226, 27);
+            this.ReportingButton.Size = new System.Drawing.Size(188, 27);
             this.ReportingButton.Text = "Создать отчёт";
             this.ReportingButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // SubTablesButton
+            // 
+            this.SubTablesButton.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
+            this.SubTablesButton.ForeColor = System.Drawing.Color.White;
+            this.SubTablesButton.Name = "SubTablesButton";
+            this.SubTablesButton.Size = new System.Drawing.Size(188, 27);
+            this.SubTablesButton.Text = "Подтаблицы";
+            this.SubTablesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SubTablesButton.Click += new System.EventHandler(this.SubtableButton_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -209,17 +220,6 @@ namespace Cinema
             this.sessionTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.sessionTable.Size = new System.Drawing.Size(306, 565);
             this.sessionTable.TabIndex = 4;
-            this.sessionTable.SelectionChanged += new System.EventHandler(this.sessionTable_SelectionChanged);
-            // 
-            // SubTablesButton
-            // 
-            this.SubTablesButton.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
-            this.SubTablesButton.ForeColor = System.Drawing.Color.White;
-            this.SubTablesButton.Name = "SubTablesButton";
-            this.SubTablesButton.Size = new System.Drawing.Size(188, 27);
-            this.SubTablesButton.Text = "Подтаблицы";
-            this.SubTablesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SubTablesButton.Click += new System.EventHandler(this.SubtableButton_Click);
             // 
             // FormHome
             // 
@@ -227,6 +227,7 @@ namespace Cinema
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 645);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(800, 400);
             this.Name = "FormHome";

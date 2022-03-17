@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace Cinema
 {
@@ -20,14 +15,14 @@ namespace Cinema
             sessionTable.BackgroundColor = Properties.Settings.Default.GridBackground;
             tableLayoutPanel1.BackColor = Properties.Settings.Default.Menu;
         }
-        AddingForm addingForm;
-        EditingForm editingForm;
-        SearchForm searchForm;
-        OtherTables tablesForm;
+        private AddingForm addingForm;
+        private EditingForm editingForm;
+        private SearchForm searchForm;
+        private OtherTables tablesForm;
         public DataSet data;
         public DataGridViewRow selectedRow;
-        string connectionString = Properties.Settings.Default.BaseConnectionString;
-        string selector_session = "selector_session";
+        private readonly string connectionString = Properties.Settings.Default.BaseConnectionString;
+        private readonly string selector_session = "selector_session";
         private void FormHome_Load(object sender, EventArgs e)
         {
             LoadTable();
@@ -51,7 +46,7 @@ namespace Cinema
             int id = sessionTable.Rows.Count + 1;
             addingForm = new AddingForm(this, id);
             addingForm.Owner = this;
-            addingForm.Show();
+            addingForm.ShowDialog();
         }
         private void EditingButton_Click(object sender, EventArgs e)
         {
@@ -71,7 +66,10 @@ namespace Cinema
             int id;
             if (selectedRow is null)
             {
-                MessageBox.Show(text: "Вы не выбрали строку для удаления!", caption: "Удаление", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Stop);
+                MessageBox.Show(text: "Вы не выбрали строку для удаления!", 
+                                caption: "Удаление", 
+                                buttons: MessageBoxButtons.OK, 
+                                icon: MessageBoxIcon.Stop);
                 return;
             }
             id = (int)selectedRow.Cells[0].Value;
@@ -102,7 +100,11 @@ namespace Cinema
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, caption: "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    MessageBox.Show(text:ex.Message, 
+                                    caption: "Ошибка", 
+                                    buttons:MessageBoxButtons.OK, 
+                                    icon:MessageBoxIcon.Error, 
+                                    MessageBoxDefaultButton.Button1);
                     transaction.Rollback();
                     throw;
                 }
@@ -131,7 +133,11 @@ namespace Cinema
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, caption: "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    MessageBox.Show(text:ex.Message, 
+                                    caption: "Ошибка", 
+                                    buttons:MessageBoxButtons.OK, 
+                                    icon:MessageBoxIcon.Error, 
+                                    MessageBoxDefaultButton.Button1);
                     transaction.Rollback();
                     throw;
                 }
@@ -149,7 +155,8 @@ namespace Cinema
                 sqlCommand.Transaction = transaction;
                 try
                 {
-                    DialogResult result = MessageBox.Show(text: $"Вы действительно хотите удалить строку под номером {id}?",
+                    DialogResult result = MessageBox.Show(
+                                    text: $"Вы действительно хотите удалить строку под номером {id}?",
                                     caption: "Удаление строки",
                                     buttons: MessageBoxButtons.YesNo,
                                     icon: MessageBoxIcon.Warning
@@ -165,7 +172,11 @@ namespace Cinema
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, caption: "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    MessageBox.Show(text: ex.Message, 
+                                    caption: "Ошибка", 
+                                    buttons: MessageBoxButtons.OK, 
+                                    icon: MessageBoxIcon.Error, 
+                                    MessageBoxDefaultButton.Button1);
                     transaction.Rollback();
                     throw;
                 }
@@ -177,11 +188,6 @@ namespace Cinema
             tablesForm = new OtherTables(this);
             tablesForm.Owner = this;
             tablesForm.ShowDialog();
-        }
-
-        private void sessionTable_SelectionChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

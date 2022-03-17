@@ -34,6 +34,7 @@ namespace Cinema
         }
         private void EditingForm_Load(object sender, EventArgs e)
         {
+            labelId.Text = formHome.selectedRow.Cells[0].Value.ToString();
             roomsTableAdapter.Fill(romsBaseDataSet.Rooms);
             filmsTableAdapter.Fill(filmsDataSet.Films);
             filmID = (int)formHome.selectedRow.Cells[1].Value - 1;

@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelId = new System.Windows.Forms.Label();
             this.filmsComboBox = new System.Windows.Forms.ComboBox();
             this.filmsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.filmsDataSet = new Cinema.FilmsDataSet();
@@ -105,19 +105,19 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Фильм";
             // 
-            // label6
+            // labelId
             // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.Honeydew;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(4);
-            this.label6.Size = new System.Drawing.Size(485, 27);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "ID";
+            this.labelId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.labelId.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelId.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelId.ForeColor = System.Drawing.Color.Honeydew;
+            this.labelId.Location = new System.Drawing.Point(0, 0);
+            this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelId.Name = "labelId";
+            this.labelId.Padding = new System.Windows.Forms.Padding(4);
+            this.labelId.Size = new System.Drawing.Size(485, 27);
+            this.labelId.TabIndex = 2;
+            this.labelId.Text = "ID";
             // 
             // filmsComboBox
             // 
@@ -225,7 +225,7 @@
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.occupancyNumeric);
             this.Controls.Add(this.filmsComboBox);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelId);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -252,7 +252,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelId;
         private System.Windows.Forms.ComboBox filmsComboBox;
         private System.Windows.Forms.NumericUpDown occupancyNumeric;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
