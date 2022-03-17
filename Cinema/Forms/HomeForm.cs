@@ -188,6 +188,7 @@ namespace Cinema
             tablesForm = new OtherTables(this);
             tablesForm.Owner = this;
             tablesForm.ShowDialog();
+            ////////
         }
     }
 }
